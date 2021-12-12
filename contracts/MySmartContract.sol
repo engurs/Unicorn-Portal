@@ -13,12 +13,15 @@ contract MySmartContract {
     }
 
 //  be called by run.js
+
+//  POST
     function unicorn() public {
         totalUnicorns += 1;
         // print wallet address of the person who called the function
         console.log("%s has unicorned!", msg.sender);
     }
 
+//  GET
     function getTotalUnicorns() public view returns (uint256) {
         console.log("We have %d total waves!", totalUnicorns);
         return totalUnicorns;
